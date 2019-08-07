@@ -1,0 +1,12 @@
+language: java
+
+notifications:
+  email: false
+
+env:
+  global:
+    # Force maven to use colorized output
+    - MAVEN_OPTS="-Djansi.force=true"
+
+script:
+  - mvn -Dstyle.color=always install
